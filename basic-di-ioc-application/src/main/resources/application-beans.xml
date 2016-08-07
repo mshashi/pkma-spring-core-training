@@ -5,13 +5,13 @@
 
 <bean name="empAddress" class="my.spring.main.Address"/>
 
-<!-- constructor-arguments injection -->
+<!-- constructor-based injection -->
 <!-- <bean name="myEmployee" class="my.spring.main.Employee">
 <constructor-arg ref="empAddress"></constructor-arg>
 </bean> -->
 
 
-<!-- property-placeholder injection -->
+<!-- setter-based injection -->
 <bean name="myEmployee" class="my.spring.main.Employee">
 <property name="empAddress" ref="empAddress"></property>
 </bean>
