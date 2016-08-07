@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="empAddress" class="my.spring.main.Address"/>
+
+<!-- constructor-arguments injection -->
+<!-- <bean name="myEmployee" class="my.spring.main.Employee">
+<constructor-arg ref="empAddress"></constructor-arg>
+</bean> -->
+
+
+<!-- property-placeholder injection -->
+<bean name="myEmployee" class="my.spring.main.Employee">
+<property name="empAddress" ref="empAddress"></property>
+</bean>
+
+</beans>
