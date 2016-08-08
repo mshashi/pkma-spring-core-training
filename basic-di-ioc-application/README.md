@@ -1,3 +1,10 @@
+#This application explains multiple DI configurations.
+
+
+####constructor-based
+####setter-based
+####property-based
+
 1. pom.xml contains the dependency for spring.
 2. MyApplication class contains the code to load the spring context, get the bean required and display the content of the bean.
 3. Address class contains the address.

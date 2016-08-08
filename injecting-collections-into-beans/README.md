@@ -1,0 +1,1 @@
+#injection-collections-into-beans: An application that shows how to set different types of collections into a spring bean.

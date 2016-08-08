@@ -1,0 +1,1 @@
+#An application that explains how spring property placeholders work.
