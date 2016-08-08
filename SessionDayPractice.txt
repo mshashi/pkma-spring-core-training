@@ -1,0 +1,8 @@
+Practice 1:
+
+	1. Create a Maven project and add Spring dependencies to it.
+	2. Create a pojo class with following details:
+		name String
+		id long
+		role String
+	3. Create a main class that creates a 

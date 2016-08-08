@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Configurations for init-method and destroy-method starts here -->
+<!-- <bean name="empAddress" class="my.spring.main.Address" init-method="myInit" destroy-method="myDestroy"/>
+
+<bean name="myEmployee" class="my.spring.main.Employee" lazy-init="true">
+<property name="empAddress" ref="empAddress"></property>
+</bean> -->
+<!-- Configurations for init-method and destroy-method ends here -->
+
+<!-- Configurations for singleton demo starts here -->
+<!--  <bean name="empAddress" class="my.spring.main.Address" scope="singleton"/>-->
+<!-- Configurations for singleton demo ends here -->
+
+<!-- Configurations for prototype demo starts here -->
+ <!-- <bean name="empAddress" class="my.spring.main.Address" scope="prototype"/> -->
+<!-- Configurations for prototype demo ends here -->
+
+<!-- Configurations for static-factory demo starts here -->
+ <!-- <bean name="staticFactoryBean" class="my.spring.main.StaticFactoryBean" factory-method="createInstance"/> -->
+<!-- Configurations for static-factory demo ends here -->
+
+<!-- Configurations for instance-factory demo starts here -->
+ <!-- <bean id="instanceFactoryBean" class="my.spring.main.InstanceFactoryBean"></bean>
+ <bean name="myInstanceFactoryBean" factory-bean="instanceFactoryBean" factory-method="createInstance"/> -->
+ <!-- <bean name="myInstanceFactoryBeanWithArgument" factory-bean="instanceFactoryBean" factory-method="createInstanceWithArgument">
+ <constructor-arg><value>This is a argumented invocation</value></constructor-arg>
+ </bean> -->
+<!-- Configurations for instance-factory demo ends here -->
+
+<!-- Configurations for autowire demo starts here -->
+ <bean id="empAddress" class="my.spring.main.Address"/>
+ <bean id="myEmployee" class="my.spring.main.Employee" autowire="constructor"/>
+<!-- Configurations for autorwire demo ends here -->
+
+
+</beans>
