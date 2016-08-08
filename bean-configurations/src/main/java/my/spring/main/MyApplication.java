@@ -10,10 +10,11 @@ public class MyApplication {
 	 */
 //	public static void main(String[] args) {
 //		ConfigurableApplicationContext springContext = new ClassPathXmlApplicationContext("application-beans.xml");
+//		springContext.registerShutdownHook();
 //		Employee employee = (Employee)springContext.getBean("myEmployee");
 //		System.out.println(employee.employeeId);
 //		System.out.println(employee.empAddress.address);
-//		springContext.close();
+//
 //	}
 	
 	
