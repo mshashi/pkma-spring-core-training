@@ -66,8 +66,9 @@ public class MyApplication {
 	public static void main(String[] args) {
 		ApplicationContext springContext = new ClassPathXmlApplicationContext("application-beans.xml");
 		
-		Employee employeeBean = (Employee)springContext.getBean("myEmployee");
-		System.out.println(employeeBean.empAddress.address);
+//		Employee employeeBean = (Employee)springContext.getBean("myEmployee");
+		EmployeeUsingAutowired employeeBean = (EmployeeUsingAutowired)springContext.getBean("myEmployee");
+		System.out.println(employeeBean.getEmpAddress().address);
 		
 		
 	}
