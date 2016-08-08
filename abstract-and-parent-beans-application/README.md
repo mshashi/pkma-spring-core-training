@@ -1,0 +1,1 @@
+#This project explains how the abstract class and parent class are declared in spring.
