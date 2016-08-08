@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="myBean" class="my.spring.main.MyBean">
+		<property name="sampleList">
+			<list>
+				<value>INDIA</value>
+				<value>INDIA</value>
+				<value>USA</value>
+				<value>AFRICA</value>
+			</list>
+		</property>
+
+		<property name="sampleSet">
+			<set>
+				<value>INDIA</value>
+				<value>CANDA</value>
+				<value>USA</value>
+				<value>AFRICA</value>
+			</set>
+		</property>
+
+		<property name="sampleMap">
+			<map>
+				<entry key="1" value="INDIA" />
+				<entry key="2" value="CANDA" />
+				<entry key="3" value="USA" />
+				<entry key="4" value="AFRICA" />
+			</map>
+		</property>
+	</bean>
+
+
+</beans>
