@@ -1,6 +1,6 @@
 package my.spring.main;
 
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyApplication {
@@ -8,14 +8,18 @@ public class MyApplication {
 	/**
 	 * Main method for showing init-method and destroy-method.
 	 */
-//	public static void main(String[] args) {
-//		ConfigurableApplicationContext springContext = new ClassPathXmlApplicationContext("application-beans.xml");
-//		springContext.registerShutdownHook();
-//		Employee employee = (Employee)springContext.getBean("myEmployee");
-//		System.out.println(employee.employeeId);
-//		System.out.println(employee.empAddress.address);
-//
-//	}
+	public static void main(String[] args) {
+		System.out.println("Before loading the context");
+		ConfigurableApplicationContext springContext = new ClassPathXmlApplicationContext("application-beans.xml");
+		System.out.println("After loading the context");
+		springContext.registerShutdownHook();
+		System.out.println("Before loading the bean");
+		Employee employee = (Employee)springContext.getBean("myEmployee");
+		System.out.println("After loading the bean");
+		System.out.println("This is being displayed in the application class: "+ employee.employeeId);
+		System.out.println(employee.empAddress.address);
+
+	}
 	
 	
 	/**
@@ -64,15 +68,15 @@ public class MyApplication {
 	 * Autowiring demo
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		ApplicationContext springContext = new ClassPathXmlApplicationContext("application-beans.xml");
-		
-//		Employee employeeBean = (Employee)springContext.getBean("myEmployee");
-		EmployeeUsingAutowired employeeBean = (EmployeeUsingAutowired)springContext.getBean("myEmployee");
-		System.out.println(employeeBean.getEmpAddress().address);
-		
-		
-	}
+//	public static void main(String[] args) {
+//		ApplicationContext springContext = new ClassPathXmlApplicationContext("application-beans.xml");
+//		
+////		Employee employeeBean = (Employee)springContext.getBean("myEmployee");
+//		EmployeeUsingAutowired employeeBean = (EmployeeUsingAutowired)springContext.getBean("myEmployee");
+//		System.out.println(employeeBean.getEmpAddress().address);
+//		
+//		
+//	}
 	
 	
 

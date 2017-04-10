@@ -8,7 +8,7 @@ public class Employee {
 	
 	//This is invoked when creating a bean with setter-based
 	public Employee(){
-		
+		System.out.println("This is ID is being displayed in the Employee class: "+this.employeeId);
 	}
 	
 	//This is invoked when creating a bean with constructor-based

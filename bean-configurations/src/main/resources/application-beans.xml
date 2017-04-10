@@ -8,11 +8,11 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 <!-- Configurations for init-method and destroy-method starts here -->
-<!-- <bean name="empAddress" class="my.spring.main.Address" init-method="myInit" destroy-method="myDestroy"/>
+<bean name="empAddress" class="my.spring.main.Address" init-method="myInit" destroy-method="myDestroy"/>
 
-<bean name="myEmployee" class="my.spring.main.Employee" lazy-init="true">
+<bean name="myEmployee" class="my.spring.main.Employee" >
 <property name="empAddress" ref="empAddress"></property>
-</bean> -->
+</bean>
 <!-- Configurations for init-method and destroy-method ends here -->
 
 <!-- Configurations for singleton demo starts here -->
@@ -36,10 +36,10 @@
 <!-- Configurations for instance-factory demo ends here -->
 
 <!-- Configurations for autowire demo starts here -->
- <context:annotation-config />
- <bean id="empAddress" class="my.spring.main.Address"/>
+ <!-- <context:annotation-config />
+ <bean id="empAddress" class="my.spring.main.Address"/> -->
  <!-- <bean id="myEmployee" class="my.spring.main.Employee" /> -->
- <bean id="myEmployee" class="my.spring.main.EmployeeUsingAutowired" />
+ <!-- <bean id="myEmployee" class="my.spring.main.EmployeeUsingAutowired" /> -->
 <!-- Configurations for autorwire demo ends here -->
 
 
